@@ -13,11 +13,6 @@ public class TaxCalc2020 implements TaxCalc {
     }
 
     @Override
-    public double getTaxableIncome() {
-        return taxableIncome;
-    }
-
-    @Override
     public double computeTax() {
         if (taxableIncome < 50000000) {
             return taxableIncome * 0.2;

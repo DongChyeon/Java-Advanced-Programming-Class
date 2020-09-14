@@ -13,11 +13,6 @@ public class TaxCalc2019 implements TaxCalc {
     }
 
     @Override
-    public double getTaxableIncome() {
-        return taxableIncome;
-    }
-
-    @Override
     public double computeTax() {
         return taxableIncome * 0.25;
     }
