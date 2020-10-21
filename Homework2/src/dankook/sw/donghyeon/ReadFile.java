@@ -6,19 +6,20 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class ReadFile {
-    public ReadFile() {
+
+    public static void readFile(String pathname) {
         try {
-            File file = new File("src/data.txt");
+            File file = new File(pathname);
             Scanner scanner = new Scanner(file);
 
             if (scanner.hasNextLine()) {
                 String data = scanner.nextLine();
-                String dataArr[] = data.split(",");
+                String[] dataArr = data.split(",");
                 for (int i = 0; i < dataArr.length; i++) {
                     System.out.printf("%-7s", dataArr[i]);
                 }
                 System.out.print("\n");
-                float avg[] = new float[Integer.parseInt(dataArr[0])];
+                float[] avg = new float[Integer.parseInt(dataArr[0])];
                 int cnt = 0;
 
                 while (scanner.hasNextLine()) {
@@ -47,6 +48,6 @@ public class ReadFile {
     }
 
     public static void main(String[] args) {
-        new ReadFile();
+        readFile("src/data.txt");
     }
 }
