@@ -29,6 +29,12 @@ public class StockMarketMgt {
         return true;
     }
 
+    public void displayConsoleRecords() {
+        for (String key : companies.keySet()) {
+            System.out.printf("%-20s %-5d\n", key, companies.get(key));
+        }
+    }
+
     public Integer search(String key) {
         return companies.get(key);
     }
