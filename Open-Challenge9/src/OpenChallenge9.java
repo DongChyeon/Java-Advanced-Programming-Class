@@ -19,9 +19,9 @@ public class OpenChallenge9 extends JFrame {
             setBackground(Color.LIGHT_GRAY);
             setLayout(new FlowLayout());
 
-            add(new Button("Open"));
-            add(new Button("Read"));
-            add(new Button("Close"));
+            add(new JButton("Open"));
+            add(new JButton("Read"));
+            add(new JButton("Close"));
         }
     }
 
