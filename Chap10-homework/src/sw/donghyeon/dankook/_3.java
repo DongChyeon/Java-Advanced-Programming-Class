@@ -8,7 +8,7 @@ public class _3 extends JFrame {
     JLabel jLabel = new JLabel("Love java");
 
     public _3() {
-        setTitle("마우스 올리기 내리기 이벤트");
+        setTitle("키보드 입력 이벤트");
         setSize(250, 150);
         Container c = getContentPane();
         c.setLayout(new FlowLayout());

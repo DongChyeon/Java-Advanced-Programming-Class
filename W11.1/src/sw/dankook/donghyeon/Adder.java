@@ -2,10 +2,7 @@ package sw.dankook.donghyeon;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
+import java.awt.event.*;
 
 public class Adder extends JFrame {
     private JTextField txt;
@@ -30,7 +27,18 @@ public class Adder extends JFrame {
 
         txt.addKeyListener(new MyKeyListener());
         btn.addActionListener(new MyActionListener());
+        btn.addMouseListener(new MyMouseListener());
         setVisible(true);
+    }
+
+    class MyMouseListener extends MouseAdapter {
+        @Override
+        public void mousePressed(MouseEvent e) {
+            int n = Integer.parseInt(txt.getText());
+            sum = sum + n;
+            lbl.setText(Integer.toString(sum));
+            txt.requestFocus();
+        }
     }
 
     class MyActionListener implements ActionListener {
